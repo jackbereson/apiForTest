@@ -48,4 +48,9 @@ app.get('/test', (req, res) => res.send('Welcome To Code Handbook!'))
 // Routes
 app.use('/users', require('./routes/users'));
 
+const port = process.env.PORT || 8080;
+app.listen(port);
+console.log(`Server listening at ${port}`);
+console.log(`connect api : http://localhost:${port}/`);
+
 module.exports = app;
