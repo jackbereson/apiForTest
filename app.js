@@ -30,10 +30,10 @@ mongoose.connect(conn, {
 
 const app = express();
 app.use(cookieParser())
-app.use(cors({
-  origin: 'http://localhost:3000',
-  credentials: true
-}));
+// app.use(cors({
+//   origin: 'http://localhost:3000',
+//   credentials: true
+// }));
 
 // Middlewares moved morgan into if for clear tests
 if (!process.env.NODE_ENV === 'test') {
